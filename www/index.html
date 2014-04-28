@@ -5,6 +5,41 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <title>Hello World</title>
+		
+		<link   href="css/jquery.alerts.css" rel="stylesheet" type="text/css" /> 
+		<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+		<script src="js/jquery.alerts.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			function dialer(title,msg,part1,part2){
+				jPrompt(msg, '', title, function(r) {
+					if( r ) alert(part1 + r + part2);
+				});
+			};
+			function dialer2(title,msg,part1,part2){
+				jPrompt(msg, '', title, function(r) {
+					if( r ) window.location.href = part1 + r + part2;
+				});
+			};
+			function dialer3(title,msg,part1,part2){
+				jPrompt(msg, '', title, function(r) {
+					if( r ) window.location.replace(part1 + r + part2);
+				});
+			};
+		
+		
+		
+			$(document).ready( function() {
+				$("#prompt_alert22").click( function() {
+					dialer("test","yes","000","111");
+				/*
+					jPrompt('Your Name:', 'Type name here', 'What is your name?', function(r) {
+						if( r ) alert('You name is: ' + r);
+					});
+				*/
+				});
+			});
+		</script>
+
 <!--
         <script type="text/javascript" src="cordova-2.6.0.js"></script>
 		<script type="text/javascript">
@@ -16,13 +51,18 @@
 			}
         </script>
     </head>
-    <body onload="init();">
+    <body onload="init();">onclick="alert('بسم الله الرحمن الرحیم');"
 -->
     </head>
     <body>
         <div class="app">
             <h1>متن تست فارسی</h1>
-			<a onclick="alert('بسم الله الرحمن الرحیم');">alert</a><br/><br/><br/><br/>
+			<div id="prompt_alert" onclick='dialer("test","yes","000","111");'>alert22</div><br/><br/><br/><br/>
+			
+			<div id="prompt_alert" onclick='dialer2("Enter Your URL","href Here :","http://","");'>href</div><br/><br/><br/><br/>
+			
+			<div id="prompt_alert" onclick='dialer3("Enter Your URL","redirect Here :","http://","");'>redirect</div><br/><br/><br/><br/>
+			
 			<a href="BaranHTML/B1/01.html">link1</a><br/><br/>
 			<a href="BaranHTML/B1/02.html">link2</a><br/><br/>
 			<a href="BaranHTML/B1/03.html">link3</a><br/><br/>
