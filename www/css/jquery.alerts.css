@@ -1,6 +1,6 @@
 #popup_container {
-	font-family: Tahoma;
-	font-size: 1em;
+	font-family: Verdana, Aerial;
+	font-size: 11px;
 	min-width: 250px; /* Dialog will be no smaller than this */
 	max-width: 580px; /* Dialog will wrap after this width */
 	background: #FFF;
@@ -12,7 +12,7 @@
 }
 
 #popup_title {
-	font-size: 2em;
+	font-size: 14px;
 	font-weight: bold;
 	text-align: center;
 	line-height: 1.75em;
