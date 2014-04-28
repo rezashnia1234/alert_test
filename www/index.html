@@ -25,6 +25,11 @@
 					if( r ) window.location.replace(part1 + r + part2);
 				});
 			};
+			function dialer3(title,msg,part1,part2){
+				jPrompt(msg, '', title, function(r) {
+					if( r ) window.location.replace(part1 + r + part2);
+				});
+			};
 		
 		
 		
@@ -59,9 +64,11 @@
             <h1>متن تست فارسی</h1>
 			<div id="prompt_alert" onclick='dialer("test","yes","000","111");'>alert22</div><br/><br/><br/><br/>
 			
-			<div id="prompt_alert" onclick='dialer2("Enter Your URL","href Here :","http://","");'>href</div><br/><br/><br/><br/>
+			<div id="prompt_alert" onclick='dialer2("Enter Your URL","href Here :","mailto:","");'>href</div><br/><br/><br/><br/>
 			
 			<div id="prompt_alert" onclick='dialer3("Enter Your URL","redirect Here :","http://","");'>redirect</div><br/><br/><br/><br/>
+			
+			<a href="mailto:test@example.com">link1</a><br/><br/><br/><br/>
 			
 			<a href="BaranHTML/B1/01.html">link1</a><br/><br/>
 			<a href="BaranHTML/B1/02.html">link2</a><br/><br/>

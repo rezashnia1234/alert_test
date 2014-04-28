@@ -33,8 +33,8 @@
 		verticalOffset: -75,                // vertical offset of the dialog from center screen, in pixels
 		horizontalOffset: 0,                // horizontal offset of the dialog from center screen, in pixels/
 		repositionOnResize: true,           // re-centers the dialog on window resize
-		overlayOpacity: .01,                // transparency level of overlay
-		overlayColor: '#FFF',               // base color of overlay
+		overlayOpacity: .7,                // transparency level of overlay
+		overlayColor: '#000000',               // base color of overlay
 		draggable: true,                    // make the dialogs draggable (requires UI Draggables plugin)
 		okButton: '&nbsp;تائید&nbsp;',         // text for the OK button
 		cancelButton: '&nbsp;انصراف&nbsp;', // text for the Cancel button
@@ -96,8 +96,9 @@
 			$("#popup_message").html( $("#popup_message").text().replace(/\n/g, '<br />') );
 			
 			$("#popup_container").css({
-				minWidth: $("#popup_container").outerWidth(),
-				maxWidth: $("#popup_container").outerWidth()
+				//minWidth: $("#popup_container").outerWidth(),
+				//maxWidth: $("#popup_container").outerWidth()
+				width:'50%'
 			});
 			
 			$.alerts._reposition();
